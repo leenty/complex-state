@@ -1,0 +1,23 @@
+{
+  "name": "complex-state",
+  "version": "1.0.0",
+  "description": "solving a complex state consisting of multiple states",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "complex",
+    "state"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leenty/complex-state.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leenty/complex-state/issues"
+  },
+  "homepage": "https://github.com/leenty/complex-state#readme",
+  "author": "leenty@qq.com",
+  "license": "ISC"
+}
