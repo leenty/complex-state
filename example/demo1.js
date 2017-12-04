@@ -1,4 +1,4 @@
-const complexState = require('../lib')
+const ComplexState = require('../lib')
 
 // 预定义复合状态
 // 复合状态其实可以看做是一张表
@@ -17,7 +17,7 @@ const stateSource = [
   [        6            ,                 , 'stringFlag1' , 'storeReturnGoods', '将前往门店退货']
 ]
 
-const stateMap = new complexState(stateSource)
+const stateMap = new ComplexState(stateSource)
 
 // 基础用法：获取预定义的复合状态
 ;(() => {
