@@ -1,6 +1,10 @@
 const complexState = require('../lib')
 
 // 预定义复合状态
+// 复合状态其实可以看做是一张表
+// 由表头(map)和条目组成
+// 每个条目声明了由多个状态组成一个复合状态的关系
+// 
 const stateSource = [
   [      'state1'       ,     'state2'    ,    'state3'   ] ,
   [         2           ,         6       ,               ,  'cancelRefunds'  , '取消了本次退款申请'],
