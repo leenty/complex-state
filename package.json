@@ -19,5 +19,6 @@
   },
   "homepage": "https://github.com/leenty/complex-state#readme",
   "author": "leenty@qq.com",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {}
 }

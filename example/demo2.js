@@ -11,9 +11,9 @@ const stateSource = [
 const logoState = new ComplexState(stateSource)
 
 const stateObj = {
-  state1: true, // 类型{Boolean} 取值[true|false]
-  state2: 0, // 类型{Number} 取值[0|1|2]
-  state3: 'STATE_1' // 类型{String} 取值['STATE_1'|'STATE_2']
+  state1: true, // @type{Boolean} 取值[true|false]
+  state2: 0, // @type{Number} 取值[0|1|2|3]
+  state3: 'STATE_1' // @type{String} 取值['STATE_1'|'STATE_2']
 }
 
 const methods = {
