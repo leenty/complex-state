@@ -57,7 +57,7 @@
   import ComplexState from 'complexState'
 
   // 定义source, 二维数组，可视作是排列了所用情况的一张表格，具体解释看下文: 详解-source
-  const stateSource = [
+  const source = [
     ['state1', 'state2', 'state3'],
     [  true  ,    0    , 'STATE_1', 'showLogoA', 'this is infoA'],
     [  true  ,    0    , 'STATE_2', 'showLogoB', 'this is infoB'],
@@ -65,13 +65,13 @@
   ]
 
   // 实例化ComplexState对象
-  const logoState = new ComplexState(stateSource)
+  const demoResource = new ComplexState(source)
 
   const methods = {
     // 通过isStateResource方法获取showLogoA的判断函数
-    showLogoA: logoState.isStateResource('showLogoA'),
+    showLogoA: demoResource.isStateResource('showLogoA'),
     // 通过getStateResource方法获取文案函数
-    getlogoInfo: logoState.getStateResource()
+    getlogoInfo: demoResource.getStateResource()
   }
 
   // 调用
@@ -83,13 +83,13 @@
 ```
 npm i -S complex-state
 ```
-使用：
-```
+### 使用
+```javascript
   // 导入
   import ComplexState from 'complexState'
 
   // 定义复合状态关系表
-  const stateSource = [
+  const source = [
     ['state1', 'state2', 'state3'],
     [  true  ,    0    , 'STATE_1', 'showLogoA', 'this is infoA'],
     [  true  ,    0    , 'STATE_2', 'showLogoB', 'this is infoB'],
@@ -97,10 +97,10 @@ npm i -S complex-state
   ]
 
   // 传入source实例化对象
-  const logoState = new ComplexState(stateSource)
+  const demoResource = new ComplexState(source)
 ```
 
-### 详解-`source`
+### 详解复合状态关系表-`source`
 `ComplexState`需要开发者提供一个`source`才能开始工作。
 
 `source`实质上可以说是一张列举了所有`complexState(复合状态)`与子状态关系的一张表格。
@@ -113,9 +113,9 @@ npm i -S complex-state
 
 看下面表格
 
- \     | ...子状态 | `token(复合状态的令牌)` | `value(复合状态的值)`
------: | -------- | ------------- | ----------
-   表头 | `'state1', 'state2', 'state3'` |
+ \      | ...子状态 | `token(复合状态的令牌)` | `value(复合状态的值)`
+-----:  | -------- | :-----------: | :--------:
+   表头 | `'state1', 'state2', 'state3'` | --- | ---
 复合关系 | `true, 0, 'STATE_1'`     | `'showLogoA'` | `'this is infoA'`
 复合关系 | `true, 0, 'STATE_2'`     | `'showLogoB'` | `'this is infoB'`
 复合关系 | `true, [1,2], 'STATE_3'` | `'showLogoC'` | `'this is infoC'`
@@ -150,7 +150,7 @@ npm i -S complex-state
 ```
 ```javascript
 对于参数states，提供参数式或是对象式入参
-const logoState = new ComplexState(stateSource)
-logoState.getState()
+const demoResource = new ComplexState(source)
+demoResource.getState()
 
 ```
